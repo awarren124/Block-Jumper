@@ -8,7 +8,8 @@ public class CameraControl : MonoBehaviour {
     public Vector3 offset;
     public float smoothness = 0.125f;
 
-	void LateUpdate () {
+    void FixedUpdate() {
         transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x, 0, player.transform.position.z) + offset, smoothness);
-	}
+
+    }
 }

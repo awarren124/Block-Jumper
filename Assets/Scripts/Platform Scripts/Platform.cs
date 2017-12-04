@@ -8,7 +8,6 @@ public class Platform : MonoBehaviour {
     public float maxTime = 2f;
     public int oscillations = 3;
     public PlatformModifiers[] modifiers;
-    public float showTime = 0.5f;
     [HideInInspector]
     public bool shouldParent = true;
     [HideInInspector]
@@ -33,7 +32,7 @@ public class Platform : MonoBehaviour {
             timer += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        transform.position = initialPos;
+//        transform.position = initialPos;
     }
 
 
