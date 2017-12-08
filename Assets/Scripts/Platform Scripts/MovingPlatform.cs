@@ -14,12 +14,18 @@ public class MovingPlatform : MonoBehaviour {
 
     void Start(){
         initialPos = transform.position;
+        print(initialPos.y);
     }
 
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;
-
-        for(float i = 0; i < xPath.keys[xPath.length - 1].time; i += 0.1f) {
+        float maxTime;
+        if(xPath.keys[xPath.length - 1].time > zPath.keys[zPath.length - 1].time){
+            maxTime = xPath.keys[xPath.length - 1].time;
+        }else{
+            maxTime = zPath.keys[zPath.length - 1].time;
+        }
+        for(float i = 0; i < maxTime; i += 0.1f) {
             if(initialPos != Vector3.zero) {
                 Gizmos.DrawLine(new Vector3(xPath.Evaluate(i), 0, zPath.Evaluate(i)) + initialPos, new Vector3(xPath.Evaluate(i + 0.1f), 0, zPath.Evaluate(i + 0.1f)) + initialPos);
             }else {

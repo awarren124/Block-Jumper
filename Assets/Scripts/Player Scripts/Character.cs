@@ -15,7 +15,8 @@ public class Character : MonoBehaviour {
 
     void FixedUpdate(){
         if(transform.position.y < dieHeight){
-            SceneManager.LoadScene(0);
+            print("here");
+            SceneManager.LoadScene(GameManager.currentLevel);
         }
     }
 

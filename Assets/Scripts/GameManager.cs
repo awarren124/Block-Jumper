@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -17,5 +18,10 @@ public class GameManager : MonoBehaviour {
     }
     [HideInInspector]
     public GameObject player;
+    public static int currentLevel;
 	
+    public static void LoadLevel(int levelNum){
+        currentLevel = levelNum;
+        SceneManager.LoadScene(levelNum);
+    }
 }
