@@ -10,10 +10,12 @@ public class MovingPlatform : MonoBehaviour {
     public AnimationCurve zPath;
     public AnimationCurve rotPath;
     Vector3 initialPos;
+    Quaternion initialRot;
     public bool shouldMove = true;
 
     void Start(){
         initialPos = transform.position;
+        initialRot = transform.rotation;
         print(initialPos.y);
     }
 
@@ -38,7 +40,7 @@ public class MovingPlatform : MonoBehaviour {
     void FixedUpdate () {
         if(shouldMove) {
             transform.position = new Vector3(initialPos.x + xPath.Evaluate(timer), transform.position.y, initialPos.z + zPath.Evaluate(timer));
-            transform.rotation = Quaternion.Euler(Vector3.up * rotPath.Evaluate(timer));
+            transform.rotation = Quaternion.Euler(initialRot.eulerAngles.x, initialRot.eulerAngles.y + rotPath.Evaluate(timer), initialRot.eulerAngles.z);
             timer += Time.fixedDeltaTime;
         }
 
