@@ -16,7 +16,6 @@ public class MovingPlatform : MonoBehaviour {
     void Start(){
         initialPos = transform.position;
         initialRot = transform.rotation;
-        print(initialPos.y);
     }
 
     private void OnDrawGizmosSelected() {
@@ -29,9 +28,9 @@ public class MovingPlatform : MonoBehaviour {
         }
         for(float i = 0; i < maxTime; i += 0.1f) {
             if(initialPos != Vector3.zero) {
-                Gizmos.DrawLine(new Vector3(xPath.Evaluate(i), 0, zPath.Evaluate(i)) + initialPos, new Vector3(xPath.Evaluate(i + 0.1f), 0, zPath.Evaluate(i + 0.1f)) + initialPos);
+                Gizmos.DrawLine(new Vector3(xPath.Evaluate(i), -0.5f + initialPos.y, zPath.Evaluate(i)) + initialPos, new Vector3(xPath.Evaluate(i + 0.1f), -0.5f + initialPos.y, zPath.Evaluate(i + 0.1f)) + initialPos);
             }else {
-                Gizmos.DrawLine(new Vector3(xPath.Evaluate(i), 0, zPath.Evaluate(i)) + transform.position, new Vector3(xPath.Evaluate(i + 0.1f), 0, zPath.Evaluate(i + 0.1f)) + transform.position);
+                Gizmos.DrawLine(new Vector3(xPath.Evaluate(i), -0.5f + transform.position.y, zPath.Evaluate(i)) + transform.position, new Vector3(xPath.Evaluate(i + 0.1f), -0.5f + transform.position.y, zPath.Evaluate(i + 0.1f)) + transform.position);
             }
 
         }

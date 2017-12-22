@@ -8,6 +8,7 @@ public class Character : MonoBehaviour {
     public Vector3 platformOffset = new Vector3(0f, 1f, 0f);
     public float platformSnapTime = 1f;
     public float dieHeight = -2f;
+    float snapError = 0.1f;
 
     void Awake(){
         GameManager.instance.player = gameObject;
@@ -17,15 +18,17 @@ public class Character : MonoBehaviour {
         print(transform.lossyScale);
 
         if(transform.position.y < dieHeight){
+            print("loading..." + transform.position.y);
             SceneManager.LoadScene(GameManager.currentLevel);
         }
     }
 
     void OnCollisionEnter(Collision col){
         if(col.collider.gameObject.GetComponentInParent<Platform>() != null){
-            print("Entering collision");
-            StartCoroutine(SnapToPosition(transform, col.collider.gameObject.transform, platformSnapTime));
-            
+            if(col.contacts[0].normal == Vector3.up) {
+                StartCoroutine(SnapToPosition(transform, col.collider.gameObject.transform, platformSnapTime));
+                col.gameObject.GetComponent<Platform>().StartCoroutine(col.gameObject.GetComponent<Platform>().Oscillate());
+            }
         }
     }
 

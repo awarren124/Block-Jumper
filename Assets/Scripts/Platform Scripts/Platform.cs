@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Platform : MonoBehaviour {
-    public float oscillationDampen = 2f;
-    public float oscillationAmplitude = 1f;
+    public float oscillationDampen = 3f;
+    public float oscillationAmplitude = 0.54f;
     public float maxTime = 2f;
     public int oscillations = 3;
     public PlatformModifiers[] modifiers;
@@ -17,13 +17,7 @@ public class Platform : MonoBehaviour {
         initialScale = transform.localScale;
     }
 
-    void OnCollisionEnter(Collision col){
-        if(col.collider.gameObject.tag == "Player"){
-            StartCoroutine(Oscillate());
-        }
-    }
-
-    IEnumerator Oscillate(){
+    public IEnumerator Oscillate(){
         Vector3 initialPos = transform.position;
         //float currentOffset = oscillationAmplitude;
         float timer = 0f;
