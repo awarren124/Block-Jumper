@@ -21,13 +21,18 @@ public class MovingPlatform : MonoBehaviour {
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
         float maxTime;
+        float minTime;
         try {
-            if(xPath.keys[xPath.length - 1].time > zPath.keys[zPath.length - 1].time) {
-                maxTime = xPath.keys[xPath.length - 1].time;
+            float xTime = xPath.keys[xPath.length - 1].time - xPath.keys[0].time;
+            float zTime = zPath.keys[zPath.length - 1].time - zPath.keys[0].time;
+            if(xTime > zTime) {
+                minTime = xPath.keys[0].time;
+                maxTime = xTime;
             } else {
-                maxTime = zPath.keys[zPath.length - 1].time;
+                minTime = zPath.keys[0].time;
+                maxTime = zTime;
             }
-            for(float i = 0; i < maxTime; i += 0.1f) {
+            for(float i = minTime; i < maxTime; i += 0.1f) {
                 if(initialPos != Vector3.zero) {
                     Gizmos.DrawLine(new Vector3(xPath.Evaluate(i) + initialPos.x, initialPos.y, zPath.Evaluate(i) + initialPos.z), new Vector3(xPath.Evaluate(i + 0.1f) + initialPos.x, initialPos.y, zPath.Evaluate(i + 0.1f) + initialPos.z));
                 } else {
@@ -44,7 +49,7 @@ public class MovingPlatform : MonoBehaviour {
     void FixedUpdate () {
         if(shouldMove) {
             transform.position = new Vector3(initialPos.x + xPath.Evaluate(timer), transform.position.y, initialPos.z + zPath.Evaluate(timer));
-            transform.localEulerAngles = new Vector3(initialRot.eulerAngles.x, initialRot.eulerAngles.y + rotPath.Evaluate(timer), initialRot.eulerAngles.z);
+            transform.rotation = Quaternion.Euler(initialRot.eulerAngles.x, initialRot.eulerAngles.y + rotPath.Evaluate(timer), initialRot.eulerAngles.z);
             timer += Time.fixedDeltaTime;
         }
 

@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour {
 
-    public Vector3 platformOffset = new Vector3(0f, 1f, 0f);
+    public Vector3 platformOffset = new Vector3(0f, 12f, 0f);
     public float platformSnapTime = 1f;
     float dieHeight = -10f;
-    float snapError = 0.1f;
 
     void Awake(){
         GameManager.instance.player = gameObject;
@@ -41,7 +40,6 @@ public class Character : MonoBehaviour {
 
     void OnCollisionExit(Collision col){
         if(col.collider.gameObject.GetComponent<Platform>() != null){
-            print("Leaving Collision");
             transform.parent = null;
         }
     }
@@ -60,15 +58,14 @@ public class Character : MonoBehaviour {
 
     IEnumerator SnapToPosition(Transform a, Transform b, float totalTime){
         float elapsedTime = 0f;
-        transform.rotation = b.transform.rotation;
 
         while(elapsedTime < totalTime){
             transform.position = Vector3.Lerp(a.position, b.position + platformOffset, elapsedTime / totalTime);
-            //transform.rotation = Quaternion.Lerp(a.rotation, b.rotation, elapsedTime / totalTime);
+            transform.rotation = Quaternion.Lerp(a.rotation, b.rotation, elapsedTime / totalTime);
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-   
+        transform.rotation = b.transform.rotation;
         transform.position = b.transform.position;
     }
 

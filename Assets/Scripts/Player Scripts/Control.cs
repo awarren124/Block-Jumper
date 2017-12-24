@@ -16,12 +16,10 @@ public class Control : MonoBehaviour {
     float touchStart;
     float maxDist = 300f;
 
-    float maxCamMovement;
-    Vector3 camInitialPos;
+    float distDragged;
     void Start(){
         rb = GetComponent<Rigidbody>();
         character = GetComponent<Character>();
-        camInitialPos = Camera.main.transform.position;
     }
 
 	void Update () {
@@ -31,21 +29,20 @@ public class Control : MonoBehaviour {
                 case TouchPhase.Began:
                     touchStart = touch.position.y;
                     break;
-                /*case TouchPhase.Moved:
-                    if(touch.deltaPosition.y < 0) { //down
-                        print("here");
-                        Camera.main.gameObject.transform.position -= Vector3.up * Mathf.Clamp((touchStart - touch.position.y) / maxDist, 0f, 1f);
-                    }
+                case TouchPhase.Moved:
+                    distDragged += touch.deltaPosition.y;
+                    GameManager.instance.levelUI.UpdatePower(Mathf.Clamp((touchStart - touch.position.y)/maxDist, 0f, 1f));
                     break;
                 case TouchPhase.Stationary:
-                    break;*/
+                    break;
                 case TouchPhase.Ended:
                     if(character.isGrounded()) {
-                        magnitude = (touchStart - touch.position.y) / maxDist;
+                        magnitude = Mathf.Sqrt((touchStart - touch.position.y) / maxDist);
                         magnitude = Mathf.Clamp(magnitude, 0f, 1f);
                         Vector3 force = new Vector3(0, yStrength, zStrength) * magnitude;
                         rb.AddRelativeForce(force);
                     }
+                    distDragged = 0f;
                     break;/*
                 case TouchPhase.Canceled:
                     break;

@@ -18,14 +18,16 @@ public class GameManager : MonoBehaviour {
     }
     [HideInInspector]
     public GameObject player;
-    public GameObject levelUI;
+    public LevelUIManager levelUI;
     public static int currentLevel;
 	
     public static void LoadLevel(int levelNum){
         Time.timeScale = 1f;
         currentLevel = levelNum;
         SceneManager.LoadScene(levelNum);
-        instance.levelUI.SetActive(true);
+        if(levelNum != 0) { //Main Menu
+            instance.levelUI.gameObject.SetActive(true);
+        }
     }
 
     public void Pause() {
