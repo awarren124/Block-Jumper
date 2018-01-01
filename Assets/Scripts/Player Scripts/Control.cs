@@ -9,7 +9,6 @@ public class Control : MonoBehaviour {
     public float magnitude = 10;
 
     public float fallMultiplier = 2.5f;
-    public bool test = false;
     Rigidbody rb;
     Character character;
 
@@ -50,7 +49,7 @@ public class Control : MonoBehaviour {
                     break;*/
             }
         }
-        if(rb.velocity.y < 0 && test){
+        if(rb.velocity.y < 0){
             rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
 	}

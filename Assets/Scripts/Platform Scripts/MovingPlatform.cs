@@ -11,13 +11,16 @@ public class MovingPlatform : MonoBehaviour {
     public AnimationCurve rotPath;
     Vector3 initialPos;
     Quaternion initialRot;
+    [HideInInspector]
     public bool shouldMove = true;
 
     void Start(){
         initialPos = transform.position;
         initialRot = transform.rotation;
-    }
 
+    }
+    void Update(){
+    }
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
         float maxTime;
@@ -32,6 +35,7 @@ public class MovingPlatform : MonoBehaviour {
                 minTime = zPath.keys[0].time;
                 maxTime = zTime;
             }
+            maxTime *= 4;
             for(float i = minTime; i < maxTime; i += 0.1f) {
                 if(initialPos != Vector3.zero) {
                     Gizmos.DrawLine(new Vector3(xPath.Evaluate(i) + initialPos.x, initialPos.y, zPath.Evaluate(i) + initialPos.z), new Vector3(xPath.Evaluate(i + 0.1f) + initialPos.x, initialPos.y, zPath.Evaluate(i + 0.1f) + initialPos.z));
@@ -54,4 +58,8 @@ public class MovingPlatform : MonoBehaviour {
         }
 
 	}
+    public void InvertCurves(){
+        xPath = xPath.Inverted();
+        zPath = zPath.Inverted();
+    }
 }

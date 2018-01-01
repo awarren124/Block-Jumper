@@ -7,7 +7,6 @@ public class Platform : MonoBehaviour {
     public float oscillationAmplitude = 0.54f;
     public float maxTime = 2f;
     public int oscillations = 3;
-    public PlatformModifiers[] modifiers;
     [HideInInspector]
     public bool shouldParent = true;
     [HideInInspector]
