@@ -71,3 +71,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/World2/Level9.unity
     guid: 3a8245a4251874e30bec4261d5df853c
+  - enabled: 1
+    path: Assets/Scenes/Levels/World2/Level10.unity
+    guid: 3ade430794d2d4e67aaa457f76746d49

@@ -36,10 +36,13 @@ public class Control : MonoBehaviour {
                     break;
                 case TouchPhase.Ended:
                     if(character.isGrounded()) {
-                        magnitude = Mathf.Sqrt((touchStart - touch.position.y) / maxDist);
-                        magnitude = Mathf.Clamp(magnitude, 0f, 1f);
-                        Vector3 force = new Vector3(0, yStrength, zStrength) * magnitude;
-                        rb.AddRelativeForce(force);
+                        if(touchStart >= touch.position.y) {
+                            magnitude = Mathf.Sqrt((touchStart - touch.position.y) / maxDist);
+                            magnitude = Mathf.Clamp(magnitude, 0f, 1f);
+                            Vector3 force = new Vector3(0, yStrength, zStrength) * magnitude;
+                            print(force == null);
+                            rb.AddRelativeForce(force);
+                        }
                     }
                     distDragged = 0f;
                     break;/*

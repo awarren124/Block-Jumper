@@ -24,8 +24,10 @@ public class Character : MonoBehaviour {
     void OnCollisionEnter(Collision col){
         if(col.collider.gameObject.GetComponentInParent<Platform>() != null){
             if(col.contacts[0].normal == Vector3.up) {
+                print("ASDASD");
                 StartCoroutine(SnapToPosition(transform, col.collider.gameObject.transform, platformSnapTime));
                 col.gameObject.GetComponent<Platform>().StartCoroutine(col.gameObject.GetComponent<Platform>().Oscillate());
+                transform.parent = col.gameObject.transform;
             }
         }
     }
@@ -58,15 +60,18 @@ public class Character : MonoBehaviour {
 
     IEnumerator SnapToPosition(Transform a, Transform b, float totalTime){
         float elapsedTime = 0f;
+        Vector3 start = a.position;
+        Vector3 end = b.position;
 
         while(elapsedTime < totalTime){
-            transform.position = Vector3.Lerp(a.position, b.position + platformOffset, elapsedTime / totalTime);
+            end = new Vector3(end.x, transform.position.y, end.z);
+            transform.position = Vector3.Lerp(start, end, elapsedTime / totalTime);
             transform.rotation = Quaternion.Lerp(a.rotation, b.rotation, elapsedTime / totalTime);
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        transform.rotation = b.transform.rotation;
-        transform.position = b.transform.position;
+        transform.rotation = b.rotation;
+        transform.position = end;
     }
 
     public bool isGrounded(){
