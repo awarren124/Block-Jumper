@@ -70,7 +70,7 @@ public class Character : MonoBehaviour {
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        transform.rotation = b.rotation;
+        transform.rotation = b.transform.rotation;
         transform.position = end;
     }
 
