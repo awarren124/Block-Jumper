@@ -11,12 +11,13 @@ public class Platform : MonoBehaviour {
     public bool shouldParent = true;
     [HideInInspector]
     public Vector3 initialScale;
-
+    public bool isOscillating = false;
     void Awake(){
         initialScale = transform.localScale;
     }
 
     public IEnumerator Oscillate(){
+        isOscillating = true;
         Vector3 initialPos = transform.position;
         //float currentOffset = oscillationAmplitude;
         float timer = 0f;
@@ -25,7 +26,8 @@ public class Platform : MonoBehaviour {
             timer += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-//        transform.position = initialPos;
+        transform.position = new Vector3(transform.position.x, initialPos.y, transform.position.z);
+        isOscillating = false;
     }
 
 

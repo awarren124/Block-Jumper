@@ -14,7 +14,7 @@ public class Character : MonoBehaviour {
     }
 
     void FixedUpdate(){
-
+        //print(transform.position.y);
 
         if(transform.position.y < dieHeight){
             SceneManager.LoadScene(GameManager.currentLevel);
@@ -25,9 +25,12 @@ public class Character : MonoBehaviour {
         if(col.collider.gameObject.GetComponentInParent<Platform>() != null){
             if(col.contacts[0].normal == Vector3.up) {
                 print("ASDASD");
-                StartCoroutine(SnapToPosition(transform, col.collider.gameObject.transform, platformSnapTime));
-                col.gameObject.GetComponent<Platform>().StartCoroutine(col.gameObject.GetComponent<Platform>().Oscillate());
                 transform.parent = col.gameObject.transform;
+                if(!col.gameObject.GetComponent<Platform>().isOscillating) {
+                    col.gameObject.GetComponent<Platform>().StartCoroutine(col.gameObject.GetComponent<Platform>().Oscillate());
+                    StartCoroutine(SnapToPosition(transform, col.collider.gameObject.transform, platformSnapTime));
+
+                }
             }
         }
     }
@@ -42,6 +45,7 @@ public class Character : MonoBehaviour {
 
     void OnCollisionExit(Collision col){
         if(col.collider.gameObject.GetComponent<Platform>() != null){
+            print("DSA");
             transform.parent = null;
         }
     }
@@ -61,13 +65,17 @@ public class Character : MonoBehaviour {
     IEnumerator SnapToPosition(Transform a, Transform b, float totalTime){
         float elapsedTime = 0f;
         Vector3 start = a.position;
-        Vector3 end = b.position;
+        Vector3 end = new Vector3(b.position.x, transform.position.y, b.position.z);
+
 
         while(elapsedTime < totalTime){
-            end = new Vector3(end.x, transform.position.y, end.z);
-            transform.position = Vector3.Lerp(start, end, elapsedTime / totalTime);
+            end = new Vector3(b.position.x, transform.position.y, b.position.z);
+            Vector3 targetPos = Vector3.Lerp(start, end, elapsedTime / totalTime);
+            transform.position += new Vector3(targetPos.x - transform.position.x, 0, targetPos.z - transform.position.z);
+            //transform.position = Vector3.Lerp(start, end, elapsedTime / totalTime);
             transform.rotation = Quaternion.Lerp(a.rotation, b.rotation, elapsedTime / totalTime);
             elapsedTime += Time.deltaTime;
+
             yield return new WaitForEndOfFrame();
         }
         transform.rotation = b.transform.rotation;
@@ -78,3 +86,4 @@ public class Character : MonoBehaviour {
         return Physics.Raycast(transform.position, -Vector3.up, 1f);
     }
 }
+ 
