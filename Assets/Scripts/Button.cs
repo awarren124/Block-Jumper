@@ -6,12 +6,15 @@ public class Button : MonoBehaviour {
 
     public ButtonAction[] actions;
     public ButtonType type;
+    [HideInInspector]
     public ButtonState state = ButtonState.Default;
-
+    public Color releasedColor = new Color(0.44706f, 0.94118f, 0.38039f);
+    public Color pressedColor = new Color(0.44706f, 0.94118f, 0.38039f);
     
 
     public void Push(){
         state = ButtonState.Pressed;
+        GetComponent<Renderer>().material.color = pressedColor;
         transform.localScale -= Vector3.up * 0.2f;
         transform.position -= Vector3.up * 0.09f;
         foreach(var action in actions) {
@@ -42,6 +45,7 @@ public class Button : MonoBehaviour {
             transform.localScale += Vector3.up * 0.2f;
             transform.position += Vector3.up * 0.09f;
             state = ButtonState.Default;
+            GetComponent<Renderer>().material.color = releasedColor;
             foreach(var action in actions) {
                 switch(action.type) {
                     case ButtonActionType.PlatformMove:

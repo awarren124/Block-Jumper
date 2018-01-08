@@ -26,11 +26,9 @@ public class Character : MonoBehaviour {
             if(col.contacts[0].normal == Vector3.up) {
                 print("ASDASD");
                 transform.parent = col.gameObject.transform;
-                if(!col.gameObject.GetComponent<Platform>().isOscillating) {
-                    col.gameObject.GetComponent<Platform>().StartCoroutine(col.gameObject.GetComponent<Platform>().Oscillate());
-                    StartCoroutine(SnapToPosition(transform, col.collider.gameObject.transform, platformSnapTime));
+                col.gameObject.GetComponent<Platform>().StartCoroutine(col.gameObject.GetComponent<Platform>().Oscillate());
+                StartCoroutine(SnapToPosition(transform, col.collider.gameObject.transform, platformSnapTime));
 
-                }
             }
         }
     }
@@ -79,7 +77,7 @@ public class Character : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         transform.rotation = b.transform.rotation;
-        transform.position = end;
+        transform.position = new Vector3(b.position.x, transform.position.y, b.position.z);
     }
 
     public bool isGrounded(){

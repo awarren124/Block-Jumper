@@ -8,7 +8,10 @@ public class HiddenPlatform : MonoBehaviour {
     public float duration;
     public Vector3 targetScale;
 
-
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawCube(transform.position, GetComponent<BoxCollider>().size * targetScale.x);
+    }
 
     public IEnumerator Show(){
         if(GetComponent<ShrinkingPlatform>()){

@@ -237,6 +237,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: 22
       m_Image: {fileID: 0}
+    - m_Text: 23
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
