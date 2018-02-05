@@ -511,6 +511,7 @@ MonoBehaviour:
   oscillations: 3
   shouldParent: 1
   initialScale: {x: 0, y: 0, z: 0}
+  isOscillating: 0
 --- !u!114 &1737772859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,7 +525,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 2
   initialColor: {r: 1, g: 1, b: 1, a: 1}
-  endColor: {r: 0.50735295, g: 0.50735295, b: 0.50735295, a: 1}
+  endColor: {r: 0, g: 0, b: 0, a: 1}
+  affectEmission: 1
+  emissionEndColor: {r: 0.49411768, g: 0.7019608, b: 0.8745099, a: 1}
 --- !u!65 &1737772863
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -77,3 +77,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/World3/Level3.unity
     guid: ed8145c984efa6047a89920304003b95
+  - enabled: 1
+    path: Assets/Scenes/Levels/World3/Level4.unity
+    guid: 827c3b79e26804507a1a52a209a27756
+  - enabled: 1
+    path: Assets/Scenes/Levels/World3/Level5.unity
+    guid: a7dee7e44e52343d69cdc1dea9b232dd
+  - enabled: 1
+    path: Assets/Scenes/Levels/World3/Level6.unity
+    guid: f31c242a173554ffeb46193ffafc5f33
+  - enabled: 1
+    path: Assets/Scenes/Levels/World3/Level7.unity
+    guid: 54a27cd9aec2a405bb45d79bb52a38ab
+  - enabled: 1
+    path: Assets/Scenes/Levels/World3/Level8.unity
+    guid: 3a6e60b19545b473eaff57521e12c2d2
+  - enabled: 1
+    path: Assets/Scenes/Levels/World3/Level9.unity
+    guid: c1d6cc448155b454b92d2a09b530e8fc
+  - enabled: 1
+    path: Assets/Scenes/Levels/World3/Level10.unity
+    guid: c94f33cb13458449c98b8911998aa8ee

@@ -164,6 +164,26 @@ Prefab:
       propertyPath: duration
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: affectEmission
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
@@ -436,6 +456,26 @@ Prefab:
       propertyPath: duration
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: affectEmission
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
@@ -491,6 +531,26 @@ Prefab:
         type: 2}
       propertyPath: duration
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: affectEmission
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
@@ -589,6 +649,26 @@ Prefab:
         type: 2}
       propertyPath: duration
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: affectEmission
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}

@@ -7,25 +7,38 @@ public class HiddenPlatform : MonoBehaviour {
 
     public float duration;
     public Vector3 targetScale;
-
+    public bool startsHidden = true;
+    [HideInInspector]
+    public bool isHidden = false;
     private void OnDrawGizmos() {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawCube(transform.position, GetComponent<BoxCollider>().size * targetScale.x);
+        if(startsHidden) {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawCube(transform.position, GetComponent<BoxCollider>().size * targetScale.x);
+        }
+    }
+
+    void Start(){
+        if(startsHidden){
+            isHidden = true;
+        }else{
+            isHidden = false;
+        }
     }
 
     public IEnumerator Show(){
-        if(GetComponent<ShrinkingPlatform>()){
+        if(GetComponent<ShrinkingPlatform>()) {
             GetComponent<ShrinkingPlatform>().shouldScale = false;
         }
         float timer = 0;
-        while(timer <= duration){
+        while(timer <= duration) {
             transform.localScale = Vector3.Lerp(Vector3.zero, targetScale, timer / duration);
             timer += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        if(GetComponent<ShrinkingPlatform>()){
+        if(GetComponent<ShrinkingPlatform>()) {
             GetComponent<ShrinkingPlatform>().shouldScale = true;
         }
+        isHidden = false;
     }
 
     public IEnumerator Hide(){
@@ -39,8 +52,10 @@ public class HiddenPlatform : MonoBehaviour {
             timer += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
+        transform.localScale = Vector3.zero;
         if(GetComponent<ShrinkingPlatform>()){
             GetComponent<ShrinkingPlatform>().shouldScale = true;
         }
+        isHidden = true;
     }
 }

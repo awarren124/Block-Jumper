@@ -26,14 +26,12 @@ public class ShrinkingPlatform : MonoBehaviour {
                 timer += Time.fixedDeltaTime;
             }
         }
-
-
     }
 
     private void OnCollisionEnter(Collision collision) {
         if(collision.collider.gameObject.tag == "Player") {
             shouldScale = false;
-            transform.localScale = initialSize;
+
         }
     }
 
@@ -41,5 +39,9 @@ public class ShrinkingPlatform : MonoBehaviour {
         if(collision.collider.gameObject.tag == "Player") {
             shouldScale = true;
         }
+    }
+
+    public void ResetScale(){
+        transform.localScale = initialSize;
     }
 }

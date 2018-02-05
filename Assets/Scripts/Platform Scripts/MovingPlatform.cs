@@ -5,7 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Platform))]
 public class MovingPlatform : MonoBehaviour {
 	
-    float timer = 0f;
+    float moveTimer = 0f;
+    float rotateTimer = 0f;
     public AnimationCurve xPath;
     public AnimationCurve zPath;
     public AnimationCurve rotPath;
@@ -13,14 +14,15 @@ public class MovingPlatform : MonoBehaviour {
     Quaternion initialRot;
     [HideInInspector]
     public bool shouldMove = true;
+    [HideInInspector]
+    public bool shouldRotate = true;
 
     void Start(){
         initialPos = transform.position;
         initialRot = transform.rotation;
 
     }
-    void Update(){
-    }
+
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
         float maxTime;
@@ -52,9 +54,16 @@ public class MovingPlatform : MonoBehaviour {
 
     void FixedUpdate () {
         if(shouldMove) {
-            transform.position = new Vector3(initialPos.x + xPath.Evaluate(timer), transform.position.y, initialPos.z + zPath.Evaluate(timer));
-            transform.rotation = Quaternion.Euler(initialRot.eulerAngles.x, initialRot.eulerAngles.y + rotPath.Evaluate(timer), initialRot.eulerAngles.z);
-            timer += Time.fixedDeltaTime;
+            transform.position = new Vector3(initialPos.x + xPath.Evaluate(moveTimer),
+                                             transform.position.y,
+                                             initialPos.z + zPath.Evaluate(moveTimer));
+            moveTimer += Time.fixedDeltaTime;
+        }
+        if(shouldRotate) {
+            transform.rotation = Quaternion.Euler(initialRot.eulerAngles.x,
+                                                  initialRot.eulerAngles.y + rotPath.Evaluate(rotateTimer),
+                                                  initialRot.eulerAngles.z);
+            rotateTimer += Time.fixedDeltaTime;
         }
 
 	}

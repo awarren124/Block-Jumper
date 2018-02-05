@@ -14,7 +14,6 @@ public class Character : MonoBehaviour {
     }
 
     void FixedUpdate(){
-        //print(transform.position.y);
 
         if(transform.position.y < dieHeight){
             SceneManager.LoadScene(GameManager.currentLevel);
@@ -24,7 +23,9 @@ public class Character : MonoBehaviour {
     void OnCollisionEnter(Collision col){
         if(col.collider.gameObject.GetComponentInParent<Platform>() != null){
             if(col.contacts[0].normal == Vector3.up) {
-                print("ASDASD");
+                if(col.collider.gameObject.GetComponent<ShrinkingPlatform>() != null){
+                    col.collider.gameObject.GetComponent<ShrinkingPlatform>().ResetScale();
+                }
                 transform.parent = col.gameObject.transform;
                 col.gameObject.GetComponent<Platform>().StartCoroutine(col.gameObject.GetComponent<Platform>().Oscillate());
                 StartCoroutine(SnapToPosition(transform, col.collider.gameObject.transform, platformSnapTime));
@@ -43,7 +44,6 @@ public class Character : MonoBehaviour {
 
     void OnCollisionExit(Collision col){
         if(col.collider.gameObject.GetComponent<Platform>() != null){
-            print("DSA");
             transform.parent = null;
         }
     }

@@ -681,6 +681,8 @@ MonoBehaviour:
   duration: 1.4
   initialColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 1}
+  affectEmission: 1
+  emissionEndColor: {r: 0.49411, g: 0.70196, b: 0.8745, a: 1}
 --- !u!114 &1165061387
 MonoBehaviour:
   m_ObjectHideFlags: 0

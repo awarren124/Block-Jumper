@@ -227,6 +227,7 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 0
   shouldScale: 1
+  consistentTime: 0
 --- !u!114 &216621411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   initialColor: {r: 1, g: 1, b: 1, a: 1}
-  endColor: {r: 0.44852942, g: 0.44852942, b: 0.44852942, a: 1}
+  endColor: {r: 0, g: 0, b: 0, a: 1}
+  affectEmission: 1
+  emissionEndColor: {r: 0.49411, g: 0.70196, b: 0.8745, a: 1}
 --- !u!1001 &499219758
 Prefab:
   m_ObjectHideFlags: 0
@@ -576,6 +579,7 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 0
   shouldScale: 1
+  consistentTime: 0
 --- !u!114 &1225593012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +593,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   initialColor: {r: 1, g: 1, b: 1, a: 1}
-  endColor: {r: 0.44852942, g: 0.44852942, b: 0.44852942, a: 1}
+  endColor: {r: 0, g: 0, b: 0, a: 1}
+  affectEmission: 1
+  emissionEndColor: {r: 0.49411, g: 0.70196, b: 0.8745, a: 1}
 --- !u!1001 &1659350383
 Prefab:
   m_ObjectHideFlags: 0
@@ -759,6 +765,7 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 0
   shouldScale: 1
+  consistentTime: 0
 --- !u!114 &2123063698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,4 +779,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   initialColor: {r: 1, g: 1, b: 1, a: 1}
-  endColor: {r: 0.44852942, g: 0.44852942, b: 0.44852942, a: 1}
+  endColor: {r: 0, g: 0, b: 0, a: 1}
+  affectEmission: 1
+  emissionEndColor: {r: 0.49411, g: 0.70196, b: 0.8745, a: 1}

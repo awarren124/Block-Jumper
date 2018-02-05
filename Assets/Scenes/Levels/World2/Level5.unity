@@ -129,7 +129,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4226712377360644, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 12.6
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 4226712377360644, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -209,6 +209,7 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 0
   shouldScale: 1
+  consistentTime: 0
 --- !u!1001 &499219758
 Prefab:
   m_ObjectHideFlags: 0
@@ -466,7 +467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4977224123651330, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.7
+      value: -17.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}

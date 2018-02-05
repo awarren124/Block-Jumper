@@ -150,13 +150,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
+      time: -2.5
       value: 15
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 5
+      time: 2.5
       value: -15
       inSlope: 0
       outSlope: 0
@@ -320,7 +320,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4744497230648316, guid: 593c98ec5c196a54b9579d724a0e1b36, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 20.16
+      value: 21.48
       objectReference: {fileID: 0}
     - target: {fileID: 4744497230648316, guid: 593c98ec5c196a54b9579d724a0e1b36, type: 2}
       propertyPath: m_LocalPosition.y
@@ -445,7 +445,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4181412507758462, guid: d5be3f232cb8646058f5eb674c6f5c3e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.4
+      value: 7.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5be3f232cb8646058f5eb674c6f5c3e, type: 2}

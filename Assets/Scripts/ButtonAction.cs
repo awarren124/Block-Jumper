@@ -7,13 +7,19 @@ public struct ButtonAction {
 
     public GameObject target;
     public ButtonActionType type;
+    public bool isStrict;
 
 }
 
 public enum ButtonActionType {
-    PlatformStop,
+    PlatformStopMove,
     PlatformMove,
+    PlatformRotate,
+    PlatformStopRotate,
     PlatformShow,
     PlatformHide,
-    PlatformDissapear
+    PlatformDissapear,
+    PlatformAllowShrink,
+    PlatformProhibitShrink
+
 }

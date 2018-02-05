@@ -194,7 +194,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -209,12 +209,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].inSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -229,12 +229,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -250,6 +250,16 @@ Prefab:
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[2].value
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: rotPath.m_Curve.Array.data[2].inSlope
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: rotPath.m_Curve.Array.data[2].tangentMode
+      value: 69
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
@@ -273,7 +283,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0.1
   initialColor: {r: 1, g: 1, b: 1, a: 1}
-  endColor: {r: 0, g: 0, b: 0, a: 1}
+  endColor: {r: 0.029411793, g: 0.029411793, b: 0.029411793, a: 1}
+  affectEmission: 1
+  emissionEndColor: {r: 0.49411, g: 0.70196, b: 0.8745, a: 1}
 --- !u!1001 &499219758
 Prefab:
   m_ObjectHideFlags: 0
@@ -572,7 +584,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -587,7 +599,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].inSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -607,12 +619,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -709,7 +721,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -724,7 +736,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].inSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -744,12 +756,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -764,6 +776,26 @@ Prefab:
         type: 2}
       propertyPath: duration
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.r
+      value: 0.029411793
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.g
+      value: 0.029411793
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.b
+      value: 0.029411793
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: affectEmission
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
@@ -850,7 +882,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -865,12 +897,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].inSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -885,12 +917,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -915,6 +947,16 @@ Prefab:
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[2].value
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: rotPath.m_Curve.Array.data[2].inSlope
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: rotPath.m_Curve.Array.data[2].tangentMode
+      value: 69
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
@@ -1060,7 +1102,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -1075,12 +1117,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].inSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -1095,12 +1137,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -1125,6 +1167,36 @@ Prefab:
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[2].value
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: affectEmission
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: rotPath.m_Curve.Array.data[2].inSlope
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: rotPath.m_Curve.Array.data[2].tangentMode
+      value: 69
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
@@ -1211,7 +1283,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -1226,7 +1298,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].inSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -1246,12 +1318,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -1266,6 +1338,26 @@ Prefab:
         type: 2}
       propertyPath: duration
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.r
+      value: 0.029411793
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.g
+      value: 0.029411793
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: endColor.b
+      value: 0.029411793
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170402603529344, guid: 31adf6cfcb91843399ebff2de308fda8,
+        type: 2}
+      propertyPath: affectEmission
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31adf6cfcb91843399ebff2de308fda8, type: 2}
@@ -1352,7 +1444,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].outSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -1367,7 +1459,7 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].inSlope
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
@@ -1387,12 +1479,12 @@ Prefab:
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].tangentMode
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 114386720847300676, guid: 31adf6cfcb91843399ebff2de308fda8,
         type: 2}

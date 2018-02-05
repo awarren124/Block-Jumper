@@ -181,7 +181,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: zPath.m_Curve.Array.data[1].time
-      value: 4.5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -206,7 +206,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: xPath.m_Curve.Array.data[1].time
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -216,7 +216,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: zPath.m_Curve.Array.data[0].time
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -231,7 +231,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].time
-      value: -1.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -256,7 +256,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].time
-      value: 4.5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -350,7 +350,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: xPath.m_Curve.Array.data[0].time
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1797640199207174, guid: 593c98ec5c196a54b9579d724a0e1b36, type: 2}
       propertyPath: m_Name
@@ -433,7 +433,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: zPath.m_Curve.Array.data[1].time
-      value: 4.5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -458,7 +458,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: xPath.m_Curve.Array.data[1].time
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -468,7 +468,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: zPath.m_Curve.Array.data[0].time
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -578,7 +578,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: xPath.m_Curve.Array.data[0].value
-      value: -8
+      value: -8.082901
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -602,7 +602,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: xPath.m_Curve.Array.data[0].time
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1797640199207174, guid: 593c98ec5c196a54b9579d724a0e1b36, type: 2}
       propertyPath: m_Name
@@ -949,7 +949,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: zPath.m_Curve.Array.data[1].time
-      value: 4.5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -974,7 +974,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: xPath.m_Curve.Array.data[1].time
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -984,7 +984,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: zPath.m_Curve.Array.data[0].time
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -999,7 +999,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[0].time
-      value: -4.5
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -1024,7 +1024,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: rotPath.m_Curve.Array.data[1].time
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
@@ -1118,7 +1118,7 @@ Prefab:
     - target: {fileID: 114053072423930770, guid: 593c98ec5c196a54b9579d724a0e1b36,
         type: 2}
       propertyPath: xPath.m_Curve.Array.data[0].time
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1797640199207174, guid: 593c98ec5c196a54b9579d724a0e1b36, type: 2}
       propertyPath: m_Name

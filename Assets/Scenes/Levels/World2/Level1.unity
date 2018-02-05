@@ -503,6 +503,7 @@ MonoBehaviour:
   oscillations: 3
   shouldParent: 1
   initialScale: {x: 0, y: 0, z: 0}
+  isOscillating: 0
 --- !u!65 &1737772863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -513,5 +514,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.325336, y: 0.98094386, z: 12.106264}
-  m_Center: {x: -0.018651932, y: -0.26556808, z: 0.054619838}
+  m_Size: {x: 12.05, y: 2.55, z: 11.99}
+  m_Center: {x: 0, y: 0, z: 0}
