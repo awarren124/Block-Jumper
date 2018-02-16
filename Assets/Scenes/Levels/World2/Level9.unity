@@ -232,6 +232,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1001 &87738135
 Prefab:
   m_ObjectHideFlags: 0
@@ -397,6 +398,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1 &233277177 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1506971955295062, guid: 31adf6cfcb91843399ebff2de308fda8,
@@ -505,6 +507,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1 &259371122 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1506971955295062, guid: 31adf6cfcb91843399ebff2de308fda8,
@@ -613,6 +616,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1001 &351715286
 Prefab:
   m_ObjectHideFlags: 0
@@ -830,6 +834,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1001 &515732294
 Prefab:
   m_ObjectHideFlags: 0
@@ -1257,6 +1262,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1001 &1202176032
 Prefab:
   m_ObjectHideFlags: 0
@@ -1427,6 +1433,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1001 &1587823762
 Prefab:
   m_ObjectHideFlags: 0
@@ -1637,21 +1644,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4977224123651330, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+    - target: {fileID: 4935227527031904, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 11.5
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763620593997468, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -10.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763620593997468, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699007977703412, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699007977703412, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236935460090432, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236935460090432, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 15.32
       objectReference: {fileID: 0}
     - target: {fileID: 4494065375901946, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -12.7
+      value: 12.69
       objectReference: {fileID: 0}
-    - target: {fileID: 4765466677705820, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156118563413694, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 9
+    - target: {fileID: 4494065375901946, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 14.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
@@ -1776,6 +1803,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1 &2018528562 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1506971955295062, guid: 31adf6cfcb91843399ebff2de308fda8,
@@ -1884,3 +1912,4 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1

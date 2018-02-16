@@ -486,6 +486,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   shouldMove: 1
+  shouldRotate: 1
 --- !u!114 &1737772858
 MonoBehaviour:
   m_ObjectHideFlags: 0

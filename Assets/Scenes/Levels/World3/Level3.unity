@@ -383,6 +383,21 @@ MonoBehaviour:
     m_RotationOrder: 0
   shouldMove: 1
   shouldRotate: 1
+--- !u!114 &1519754078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519754076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2937c684e7a4497a22267d0ae86910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  targetScale: {x: 1, y: 1, z: 1}
+  startsHidden: 1
+  isHidden: 0
 --- !u!1001 &1596522584
 Prefab:
   m_ObjectHideFlags: 0
@@ -429,6 +444,10 @@ Prefab:
     - target: {fileID: 4571901115214912, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}
       propertyPath: m_LocalPosition.z
       value: 30.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683111263091474, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 31.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}

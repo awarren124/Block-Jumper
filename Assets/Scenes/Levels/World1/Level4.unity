@@ -362,6 +362,7 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1001 &1525748593
 Prefab:
   m_ObjectHideFlags: 0
@@ -520,6 +521,14 @@ Prefab:
     - target: {fileID: 4797900655904394, guid: d5be3f232cb8646058f5eb674c6f5c3e, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787919861445790, guid: d5be3f232cb8646058f5eb674c6f5c3e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787919861445790, guid: d5be3f232cb8646058f5eb674c6f5c3e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.27
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5be3f232cb8646058f5eb674c6f5c3e, type: 2}

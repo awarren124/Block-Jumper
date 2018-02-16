@@ -214,6 +214,7 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 0
   shouldScale: 1
+  consistentTime: 0
 --- !u!114 &216621411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +281,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!1001 &499219758
 Prefab:
   m_ObjectHideFlags: 0
@@ -456,6 +458,7 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 0
   shouldMove: 1
+  shouldRotate: 1
 --- !u!114 &509722759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,6 +507,7 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 0
   shouldScale: 1
+  consistentTime: 0
 --- !u!1 &517251078
 GameObject:
   m_ObjectHideFlags: 0

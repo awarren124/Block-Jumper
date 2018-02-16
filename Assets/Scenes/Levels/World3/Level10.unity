@@ -1923,7 +1923,7 @@ MonoBehaviour:
   targetScale: {x: 1, y: 1, z: 1}
   startsHidden: 1
   isHidden: 0
---- !u!1001 &1596522584
+--- !u!1001 &1673432542
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1962,17 +1962,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4687513571201284, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571901115214912, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}
+    - target: {fileID: 4683111263091474, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 57.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1922001095134250, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+      value: 60.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}
