@@ -11,9 +11,16 @@ public class MainUIManager : MonoBehaviour {
     public void WorldSelected(int worldNum){
         anim.SetTrigger("World" + worldNum + "Pressed");
         selectedWorld = worldNum;
+        anim.SetFloat("SpeedMult", 1);
+
     }
 
     public void LevelSelected(int levelNum){
         GameManager.LoadLevel((selectedWorld - 1) * 10 + levelNum);
+    }
+
+    public void BackButtonPressed(){
+        anim.SetFloat("SpeedMult", -1);
+        anim.SetTrigger("Back");
     }
 }
