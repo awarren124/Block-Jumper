@@ -25,7 +25,19 @@ public class GameManager : MonoBehaviour {
         Time.timeScale = 1f;
         currentLevel = levelNum;
         SceneManager.LoadScene(levelNum);
-        if(levelNum != 0) { //Main Menu
+    }
+
+    void OnEnable(){
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable(){
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode){
+        print("scene " + scene + " loaded");
+        if(scene.buildIndex != 0){
             instance.levelUI.gameObject.SetActive(true);
         }
     }

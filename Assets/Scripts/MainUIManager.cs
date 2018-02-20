@@ -12,7 +12,7 @@ public class MainUIManager : MonoBehaviour {
         anim.SetTrigger("World" + worldNum + "Pressed");
         selectedWorld = worldNum;
         anim.SetFloat("SpeedMult", 1);
-
+        anim.SetBool("Reversed", false);
     }
 
     public void LevelSelected(int levelNum){
@@ -21,6 +21,7 @@ public class MainUIManager : MonoBehaviour {
 
     public void BackButtonPressed(){
         anim.SetFloat("SpeedMult", -1);
+        anim.SetBool("Reversed", true);
         anim.SetTrigger("Back");
     }
 }
