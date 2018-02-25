@@ -17,13 +17,15 @@ public class ShrinkingPlatform : MonoBehaviour {
     }
 
     void FixedUpdate(){
-        if(consistentTime){
-            timer += Time.fixedDeltaTime;
-        }
-        if(shouldScale) {
-            transform.localScale = initialSize * curve.Evaluate(timer);
-            if(!consistentTime){
+        if(!GameManager.instance.isPaused) {
+            if(consistentTime) {
                 timer += Time.fixedDeltaTime;
+            }
+            if(shouldScale) {
+                transform.localScale = initialSize * curve.Evaluate(timer);
+                if(!consistentTime) {
+                    timer += Time.fixedDeltaTime;
+                }
             }
         }
     }

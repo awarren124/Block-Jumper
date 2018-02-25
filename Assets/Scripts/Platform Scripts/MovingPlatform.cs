@@ -53,17 +53,20 @@ public class MovingPlatform : MonoBehaviour {
     }
 
     void FixedUpdate () {
-        if(shouldMove) {
-            transform.position = new Vector3(initialPos.x + xPath.Evaluate(moveTimer),
+        if(!GameManager.instance.isPaused) {
+            
+            if(shouldMove) {
+                transform.position = new Vector3(initialPos.x + xPath.Evaluate(moveTimer),
                                              transform.position.y,
                                              initialPos.z + zPath.Evaluate(moveTimer));
-            moveTimer += Time.fixedDeltaTime;
-        }
-        if(shouldRotate) {
-            transform.rotation = Quaternion.Euler(initialRot.eulerAngles.x,
+                moveTimer += Time.fixedDeltaTime;
+            }
+            if(shouldRotate) {
+                transform.rotation = Quaternion.Euler(initialRot.eulerAngles.x,
                                                   initialRot.eulerAngles.y + rotPath.Evaluate(rotateTimer),
                                                   initialRot.eulerAngles.z);
-            rotateTimer += Time.fixedDeltaTime;
+                rotateTimer += Time.fixedDeltaTime;
+            }
         }
 
 	}

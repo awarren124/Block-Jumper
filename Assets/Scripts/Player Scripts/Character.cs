@@ -16,8 +16,10 @@ public class Character : MonoBehaviour {
     void FixedUpdate(){
 
         if(transform.position.y < dieHeight){
-            SceneManager.LoadScene(GameManager.currentLevel);
-        }
+            GameManager.instance.Die();
+        }   
+
+
     }
 
     void OnCollisionEnter(Collision col){
@@ -29,8 +31,14 @@ public class Character : MonoBehaviour {
                 transform.parent = col.gameObject.transform;
                 col.gameObject.GetComponent<Platform>().StartCoroutine(col.gameObject.GetComponent<Platform>().Oscillate());
                 StartCoroutine(SnapToPosition(transform, col.collider.gameObject.transform, platformSnapTime));
-
+                if(col.collider.gameObject.tag == "Finish"){
+                    GameManager.instance.LevelFinished();
+                }
             }
+        }
+
+        if(col.collider.gameObject.tag == "Bank"){
+            GameManager.instance.Die();
         }
     }
 
@@ -49,14 +57,14 @@ public class Character : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider col){
-        if(col.gameObject.GetComponent<Button>() != null){
-            col.gameObject.GetComponent<Button>().Push();
+        if(col.gameObject.GetComponent<PlatformButton>() != null){
+            col.gameObject.GetComponent<PlatformButton>().Push();
         }
     }
 
     void OnTriggerExit(Collider col){
-        if(col.gameObject.GetComponent<Button>() != null){
-            col.gameObject.GetComponent<Button>().Release();
+        if(col.gameObject.GetComponent<PlatformButton>() != null){
+            col.gameObject.GetComponent<PlatformButton>().Release();
         }
     }
 

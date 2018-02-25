@@ -88,6 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -315,6 +316,7 @@ Prefab:
     - {fileID: 114589728159161220, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
     - {fileID: 114789359362786894, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
     - {fileID: 114668938051850132, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
+    - {fileID: 114133631947978930, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1000801746 stripped
@@ -371,6 +373,30 @@ MonoBehaviour:
     m_RotationOrder: 0
   shouldScale: 1
   consistentTime: 0
+--- !u!1 &1000801748 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1997571446635454, guid: 4941d090d693aa84f86c5b5446c77696,
+    type: 2}
+  m_PrefabInternal: {fileID: 1000801745}
+--- !u!114 &1000801749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000801748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb60804d95aa42e88c8e9246070b766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+  - target: {fileID: 1149442446}
+    type: 7
+    isStrict: 1
+  type: 0
+  state: 1
+  releasedColor: {r: 0.44706, g: 0.94118, b: 0.38039, a: 1}
+  pressedColor: {r: 0.23137, g: 0.48235, b: 0.19607, a: 1}
 --- !u!1001 &1081172438
 Prefab:
   m_ObjectHideFlags: 0
@@ -680,5 +706,30 @@ Prefab:
     - {fileID: 114589728159161220, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
     - {fileID: 114789359362786894, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
     - {fileID: 114668938051850132, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
+    - {fileID: 114133631947978930, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4941d090d693aa84f86c5b5446c77696, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1894163326 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1997571446635454, guid: 4941d090d693aa84f86c5b5446c77696,
+    type: 2}
+  m_PrefabInternal: {fileID: 1894163325}
+--- !u!114 &1894163327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1894163326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb60804d95aa42e88c8e9246070b766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+  - target: {fileID: 1000801746}
+    type: 7
+    isStrict: 1
+  type: 0
+  state: 1
+  releasedColor: {r: 0.44706, g: 0.94118, b: 0.38039, a: 1}
+  pressedColor: {r: 0.23137, g: 0.48235, b: 0.19607, a: 1}

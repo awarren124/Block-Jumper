@@ -17,13 +17,16 @@ public class Platform : MonoBehaviour {
     }
 
     public IEnumerator Oscillate(){
+        
         isOscillating = true;
         Vector3 initialPos = transform.position;
         //float currentOffset = oscillationAmplitude;
         float timer = 0f;
         while (timer < maxTime){
             transform.position = new Vector3(transform.position.x, initialPos.y + -oscillationAmplitude * Mathf.Exp(-oscillationDampen * timer) * Mathf.Sin(oscillations * Mathf.PI * timer), transform.position.z);
-            timer += Time.deltaTime;
+            if(!GameManager.instance.isPaused) {
+                timer += Time.deltaTime;
+            }
             yield return new WaitForEndOfFrame();
         }
         transform.position = new Vector3(transform.position.x, initialPos.y, transform.position.z);
