@@ -88,6 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -293,38 +294,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 16.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 23052778611141254, guid: 569e245a39999fc428ac26557bbc5099,
         type: 2}
       propertyPath: m_CastShadows
@@ -344,6 +313,14 @@ Prefab:
         type: 2}
       propertyPath: computerControls
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
@@ -456,6 +433,10 @@ Prefab:
     - target: {fileID: 4142324539018774, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683111263091474, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 38.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7ff05649e9ed264aa5bb6c00480906b, type: 2}

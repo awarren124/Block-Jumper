@@ -17,9 +17,19 @@ public class Character : MonoBehaviour {
 
         if(transform.position.y < dieHeight){
             GameManager.instance.Die();
-        }   
+        }
 
 
+    }
+
+    private void Update() {
+
+        if(Input.GetKeyDown(KeyCode.M)) {
+            GameManager.instance.LevelFinished();
+        }
+        if(Input.GetKeyDown(KeyCode.R)) {
+            GameManager.instance.ResetSavedLevels();
+        }
     }
 
     void OnCollisionEnter(Collision col){

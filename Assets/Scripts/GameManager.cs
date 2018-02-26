@@ -31,15 +31,22 @@ public class GameManager : MonoBehaviour {
 
     }
 
-	
+	public void ResetSavedLevels() {
+        bool[] tmp = new bool[10];
+        tmp[0] = true;
+        PlayerPrefsX.SetBoolArray("World " + 1 + " Levels Unlocked", tmp);
+        PlayerPrefsX.SetBoolArray("World " + 2 + " Levels Unlocked", tmp);
+        PlayerPrefsX.SetBoolArray("World " + 3  + " Levels Unlocked", tmp);
+
+    }
+
     public static void LoadLevel(int worldlNum, int levelNum){
         Time.timeScale = 1f;
         if(levelNum != 0 && worldlNum != 0) {
             instance.currentLevel = levelNum;
             instance.currentWorld = worldlNum;
         }
-        print(Mathf.Max(((worldlNum - 1) * 10 + levelNum), 0));
-        print(Mathf.Max((worldlNum - 1) * 10 + levelNum));
+        //print("Loading scene with index " + ((worldlNum - 1) * 10 + levelNum + 1));
         SceneManager.LoadScene((Mathf.Max(((worldlNum - 1) * 10 + levelNum), 0)));
     }
 
@@ -77,26 +84,23 @@ public class GameManager : MonoBehaviour {
 
     public void LevelFinished(){
         instance.levelUI.ShowLevelCompleteMenu();
-        print(currentLevel < levelsPerWorld);
         if(currentLevel < levelsPerWorld) {
             unlockedLevels[currentWorld - 1, currentLevel] = true;
-            bool[] unlockedForThisWorld = PlayerPrefsX.GetBoolArray("World " + (currentWorld - 1) + "Levels Unlocked");
+            bool[] unlockedForThisWorld = PlayerPrefsX.GetBoolArray("World " + instance.currentWorld + " Levels Unlocked");
             print(unlockedForThisWorld.Length);
             print(currentLevel);
             unlockedForThisWorld[currentLevel] = true;
-            PlayerPrefsX.SetBoolArray("World " + (currentWorld - 1) + "Levels Unlocked", unlockedForThisWorld);
-        }else if(currentWorld < numOfWorlds){
-            return;
-        }else{
-            return;
+            PlayerPrefsX.SetBoolArray("World " + instance.currentWorld + " Levels Unlocked", unlockedForThisWorld);
         }
     }
 
     public void LoadNextLevel(){
+        print("currentWorld: " + currentWorld);
+        print("currentLevel: " + currentLevel);
         if(currentLevel < levelsPerWorld){
             LoadLevel(currentWorld, currentLevel + 1);
         }else if(currentWorld < numOfWorlds){
-            LoadLevel(currentWorld + 1, 0);
+            LoadLevel(currentWorld + 1, 1);
         }else{
             LoadLevel(0,0);
         }

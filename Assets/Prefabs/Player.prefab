@@ -56,8 +56,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1411588288666608}
-  m_LocalRotation: {x: 0.000003094188, y: 0.008718938, z: 0.000392622, w: 0.9999619}
-  m_LocalPosition: {x: 0, y: 0.62, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4441996742892114}
@@ -222,3 +222,4 @@ MonoBehaviour:
   magnitude: 10
   fallMultiplier: 3.49
   computerControls: 1
+  oldCharacterVelocity: {x: 0, y: 0, z: 0}

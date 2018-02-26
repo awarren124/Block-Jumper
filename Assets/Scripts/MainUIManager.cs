@@ -13,32 +13,29 @@ public class MainUIManager : MonoBehaviour {
     public void Start(){
         GameManager.instance.mainUI = this;
         for(int numOfWorld = 0; numOfWorld < GameManager.numOfWorlds; numOfWorld++){
-            if(PlayerPrefsX.GetBoolArray("World " + numOfWorld + "Levels Unlocked").Length == 0){
+            if(PlayerPrefsX.GetBoolArray("World " + (numOfWorld + 1) + " Levels Unlocked").Length == 0){
                 bool[] isUnlocked = new bool[GameManager.levelsPerWorld];
                 isUnlocked[0] = true;
-                PlayerPrefsX.SetBoolArray("World " + numOfWorld + "Levels Unlocked", isUnlocked);
+                PlayerPrefsX.SetBoolArray("World " + (numOfWorld + 1)+ " Levels Unlocked", isUnlocked);
                 for(int i = 0; i < GameManager.levelsPerWorld; i++) {
                     GameManager.unlockedLevels[numOfWorld, i] = isUnlocked[i];
 
                 }
             }else{
-                bool[] isUnlocked = PlayerPrefsX.GetBoolArray("World " + numOfWorld + "Levels Unlocked");
+                bool[] isUnlocked = PlayerPrefsX.GetBoolArray("World " + (numOfWorld + 1) + " Levels Unlocked");
                 for(int i = 0; i < GameManager.levelsPerWorld; i++) {
                     GameManager.unlockedLevels[numOfWorld, i] = isUnlocked[i];
                 }
                     
             }
         }
-        print(PlayerPrefsX.GetBoolArray("World " + 3 + "Levels Unlocked").Length);
     }
 
     public void LevelSelectShowCallback(){
-        for(int worldNum = 0; worldNum < GameManager.numOfWorlds; worldNum++) {
-            for(int levelNum = 0; levelNum < GameManager.levelsPerWorld; levelNum++){
-                GameObject buttGO = GameObject.Find("Level " + (levelNum + 1) + " Button");
-                Button levelButton = buttGO.GetComponent<Button>();
-                levelButton.interactable = GameManager.unlockedLevels[worldNum, levelNum];
-            }
+        for(int levelNum = 0; levelNum < GameManager.levelsPerWorld; levelNum++){
+            GameObject buttGO = GameObject.Find("Level " + (levelNum + 1) + " Button");
+            Button levelButton = buttGO.GetComponent<Button>();
+            levelButton.interactable = GameManager.unlockedLevels[selectedWorld - 1, levelNum];
         }
     }
 
