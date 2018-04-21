@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void LevelFinished(){
-        instance.levelUI.ShowLevelCompleteMenu();
+        StartCoroutine(instance.levelUI.ShowLevelCompleteMenu());
         if(currentLevel < levelsPerWorld) {
             unlockedLevels[currentWorld - 1, currentLevel] = true;
             bool[] unlockedForThisWorld = PlayerPrefsX.GetBoolArray("World " + instance.currentWorld + " Levels Unlocked");

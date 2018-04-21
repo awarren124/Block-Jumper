@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Control : MonoBehaviour {
 
@@ -29,7 +30,7 @@ public class Control : MonoBehaviour {
         if(!GameManager.instance.isPaused) {
             if(computerControls) {
                 GameManager.instance.levelUI.UpdatePower(1 - (Input.mousePosition.y / Screen.height));
-                if(Input.GetMouseButtonDown(0)) {
+                if(Input.GetMouseButtonDown(0) && !TouchOnUI(Input.mousePosition)) {
                     float pos = Screen.height - Input.mousePosition.y;
                     if(character.isGrounded()) {
                         magnitude = Mathf.Sqrt(pos / Screen.height);
@@ -39,35 +40,37 @@ public class Control : MonoBehaviour {
                     }
                 }
             } else {
-                if(Input.touchCount > 0) {
+                if(Input.touchCount > 0){
                     Touch touch = Input.GetTouch(0);
-                    switch(touch.phase) {
-                        case TouchPhase.Began:
-                            touchStart = touch.position.y;
-                            break;
-                        case TouchPhase.Moved:
-                            distDragged += touch.deltaPosition.y;
-                            GameManager.instance.levelUI.UpdatePower(Mathf.Clamp((touchStart - touch.position.y) / maxDist,
-                                                                             0f,
-                                                                             1f));
-                            break;
-                        case TouchPhase.Stationary:
-                            break;
-                        case TouchPhase.Ended:
-                            if(character.isGrounded()) {
-                                if(touchStart >= touch.position.y) {
-                                    magnitude = Mathf.Sqrt((touchStart - touch.position.y) / maxDist);
-                                    magnitude = Mathf.Clamp(magnitude, 0f, 1f);
-                                    Vector3 force = new Vector3(0, yStrength, zStrength) * magnitude;
-                                    rb.AddRelativeForce(force);
+
+                     
+                    if(!TouchOnUI(touch.position)) {
+                        switch(touch.phase) {
+                            case TouchPhase.Began:
+                                touchStart = touch.position.y;
+                                break;
+                            case TouchPhase.Moved:
+                                distDragged += touch.deltaPosition.y;
+                                GameManager.instance.levelUI.UpdatePower(Mathf.Clamp((touchStart - touch.position.y) / maxDist,
+                                                                                 0f,
+                                                                                 1f));
+                                break;
+                            case TouchPhase.Stationary:
+                                break;
+                            case TouchPhase.Ended:
+                                if(character.isGrounded()) {
+                                    if(touchStart >= touch.position.y) {
+                                        magnitude = Mathf.Sqrt((touchStart - touch.position.y) / maxDist);
+                                        magnitude = Mathf.Clamp(magnitude, 0f, 1f);
+                                        float pos = Screen.height - Input.mousePosition.y;
+                                        //magnitude = pos / Screen.height;
+                                        Vector3 force = new Vector3(0, yStrength, zStrength) * magnitude;
+                                        rb.AddRelativeForce(force);
+                                    }
                                 }
-                            }
-                            distDragged = 0f;
-                            break;/*
-                case TouchPhase.Canceled:
-                    break;
-                default:
-                    break;*/
+                                distDragged = 0f;
+                                break;
+                        }
                     }
                 }
             }
@@ -76,5 +79,21 @@ public class Control : MonoBehaviour {
             }
         }
 	}
+
+    public bool TouchOnUI(Vector2 pos){
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = pos;
+        List<RaycastResult> results = new List<RaycastResult>(); //EventSystem.current.RaycastAll()
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        bool retVal = false;
+        foreach(var result in results) {
+            GameObject go = result.gameObject;
+            if(go.tag == "NoTouchThrough") {
+                retVal = true;
+            }
+        }
+        return retVal;
+
+    }
 
 }

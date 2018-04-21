@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - Bank
+  - PauseMenuUIItem
+  - NoTouchThrough
   layers:
   - Default
   - TransparentFX

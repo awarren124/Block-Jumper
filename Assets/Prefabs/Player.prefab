@@ -221,5 +221,5 @@ MonoBehaviour:
   zStrength: 500
   magnitude: 10
   fallMultiplier: 3.49
-  computerControls: 0
+  computerControls: 1
   oldCharacterVelocity: {x: 0, y: 0, z: 0}

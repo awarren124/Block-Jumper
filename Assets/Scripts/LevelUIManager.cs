@@ -31,6 +31,9 @@ public class LevelUIManager : MonoBehaviour {
     }
 
     public void PauseButtonPressed() {
+
+        print("paused pressed");
+
         GameManager.instance.Pause();
         defaultMenu.SetActive(false);
         pauseMenu.SetActive(true);
@@ -48,6 +51,7 @@ public class LevelUIManager : MonoBehaviour {
         defaultMenu.SetActive(true);
         pauseMenu.SetActive(false);
         gameObject.SetActive(false);
+        anim.SetBool("LevelComplete", false);
         GameManager.instance.isPaused = false;
         GameManager.LoadLevel(0, 0);
     }
@@ -62,8 +66,10 @@ public class LevelUIManager : MonoBehaviour {
         powerRect.GetComponent<RectTransform>().sizeDelta = new Vector2(powerRect.GetComponent<RectTransform>().sizeDelta.x, Screen.height);
     }
 
-    public void ShowLevelCompleteMenu(){
+    public IEnumerator ShowLevelCompleteMenu(){
         levelText.text = GameManager.instance.currentWorld + " - " + GameManager.instance.currentLevel;
+        float delay = 0.5f;
+        yield return new WaitForSecondsRealtime(delay);
         anim.SetBool("LevelComplete", true);
     }
 
