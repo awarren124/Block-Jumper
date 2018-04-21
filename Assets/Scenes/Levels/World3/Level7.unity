@@ -1199,7 +1199,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4030296667505878, guid: 99ee9a581047d4e9c98d5c2bc8f02482, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 5.23
       objectReference: {fileID: 0}
     - target: {fileID: 4030296667505878, guid: 99ee9a581047d4e9c98d5c2bc8f02482, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1249,7 +1249,7 @@ Prefab:
     - target: {fileID: 114656141619806940, guid: 99ee9a581047d4e9c98d5c2bc8f02482,
         type: 2}
       propertyPath: xPath.m_Curve.Array.data[1].value
-      value: -12.970547
+      value: -11.296932
       objectReference: {fileID: 0}
     - target: {fileID: 114656141619806940, guid: 99ee9a581047d4e9c98d5c2bc8f02482,
         type: 2}
