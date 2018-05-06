@@ -1400,14 +1400,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0.0146865845
+      time: 2
       value: -7.8284454
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 3.5
-      value: 18.300714
+      time: 5.5
+      value: 21.30071
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1418,18 +1418,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
+      time: 2
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 3.55
-      value: 45
+      time: 5.5
+      value: 90
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    m_PreInfinity: 2
+    m_PreInfinity: 0
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1
@@ -2703,7 +2703,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10297,14 +10297,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0.0146865845
+      time: 2
       value: 7.828445
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 3.5
-      value: -18.30071
+      time: 5.5
+      value: -21.30071
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -10315,18 +10315,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
+      time: 2
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 3.55
-      value: 45
+      time: 5.5
+      value: 90
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    m_PreInfinity: 2
+    m_PreInfinity: 0
     m_PostInfinity: 0
     m_RotationOrder: 0
   shouldMove: 1

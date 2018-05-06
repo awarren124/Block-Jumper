@@ -88,6 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -185,37 +186,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
+      time: 2
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 2.0410345
+      time: 4.041034
       value: 1
       inSlope: -0
-      outSlope: -5.889809
+      outSlope: -5.8898177
       tangentMode: 69
     - serializedVersion: 2
-      time: 2.2108192
+      time: 4.210819
       value: 0
-      inSlope: -5.889809
-      outSlope: -0.000022691622
+      inSlope: -5.8898177
+      outSlope: -0.000022691613
       tangentMode: 69
     - serializedVersion: 2
-      time: 2.8050644
+      time: 4.805064
       value: -0.000013484387
-      inSlope: -0.000022691622
-      outSlope: 5.8899136
+      inSlope: -0.000022691613
+      outSlope: 5.88988
       tangentMode: 69
     - serializedVersion: 2
-      time: 2.9748485
+      time: 4.974849
       value: 1
-      inSlope: 5.8899136
+      inSlope: 5.88988
       outSlope: 0
       tangentMode: 69
     - serializedVersion: 2
-      time: 3.5
+      time: 5.5
       value: 1
       inSlope: 0
       outSlope: 0
@@ -258,13 +259,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
+      time: 2
       value: -8
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 3.5
+      time: 5.5
       value: 18.300714
       inSlope: 0
       outSlope: 0
@@ -1494,13 +1495,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
+      time: 2
       value: 8
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 3.5
+      time: 5.5
       value: -18.30071
       inSlope: 0
       outSlope: 0
@@ -1543,37 +1544,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 2
-      time: 0
+      time: 2
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 2.0410345
+      time: 4.041034
       value: 1
       inSlope: -0
-      outSlope: -5.889809
+      outSlope: -5.8898177
       tangentMode: 69
     - serializedVersion: 2
-      time: 2.2108192
+      time: 4.210819
       value: 0
-      inSlope: -5.889809
-      outSlope: -0.000022691622
+      inSlope: -5.8898177
+      outSlope: -0.000022691613
       tangentMode: 69
     - serializedVersion: 2
-      time: 2.8050644
+      time: 4.805064
       value: -0.000013484387
-      inSlope: -0.000022691622
-      outSlope: 5.8899136
+      inSlope: -0.000022691613
+      outSlope: 5.88988
       tangentMode: 69
     - serializedVersion: 2
-      time: 2.9748485
+      time: 4.974849
       value: 1
-      inSlope: 5.8899136
+      inSlope: 5.88988
       outSlope: 0
       tangentMode: 69
     - serializedVersion: 2
-      time: 3.5
+      time: 5.5
       value: 1
       inSlope: 0
       outSlope: 0
@@ -2171,7 +2172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae050dfcece745d184a6c42a6c10010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 1.4
+  duration: 3.5
   initialColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 1}
   affectEmission: 1
@@ -2230,12 +2231,12 @@ MonoBehaviour:
       time: 0
       value: 0
       inSlope: 1
-      outSlope: 360
+      outSlope: 120
       tangentMode: 69
     - serializedVersion: 2
-      time: 1
+      time: 3
       value: 360
-      inSlope: 360
+      inSlope: 120
       outSlope: 1
       tangentMode: 69
     m_PreInfinity: 1
@@ -2539,6 +2540,38 @@ Prefab:
     - target: {fileID: 4494065375901946, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
       propertyPath: m_LocalPosition.z
       value: 33.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699007977703412, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699007977703412, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 14.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699007977703412, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056666582486562, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056666582486562, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236935460090432, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 24.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236935460090432, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236935460090432, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ab4ebf72fe1c49a4b3e398159e50a08, type: 2}
