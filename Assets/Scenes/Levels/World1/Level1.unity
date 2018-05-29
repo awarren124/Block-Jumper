@@ -168,11 +168,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &499219759 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1411588288666608, guid: 569e245a39999fc428ac26557bbc5099,
-    type: 2}
-  m_PrefabInternal: {fileID: 499219758}
 --- !u!1001 &553601037
 Prefab:
   m_ObjectHideFlags: 0
@@ -211,36 +206,6 @@ Prefab:
     - target: {fileID: 4763362412211212, guid: 1c6ebe1d150578447a68fa45768338b7, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114455134886816600, guid: 1c6ebe1d150578447a68fa45768338b7,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 499219759}
-    - target: {fileID: 114455134886816600, guid: 1c6ebe1d150578447a68fa45768338b7,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20564748457910352, guid: 1c6ebe1d150578447a68fa45768338b7,
-        type: 2}
-      propertyPath: near clip plane
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114455134886816600, guid: 1c6ebe1d150578447a68fa45768338b7,
-        type: 2}
-      propertyPath: offset.x
-      value: 13.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 114455134886816600, guid: 1c6ebe1d150578447a68fa45768338b7,
-        type: 2}
-      propertyPath: offset.y
-      value: 13.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 114455134886816600, guid: 1c6ebe1d150578447a68fa45768338b7,
-        type: 2}
-      propertyPath: offset.z
-      value: -12.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c6ebe1d150578447a68fa45768338b7, type: 2}

@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
 
     }
 
-	public void ResetSavedLevels() {
+    public void ResetSavedLevels() {
         bool[] tmp = new bool[10];
         tmp[0] = true;
         PlayerPrefsX.SetBoolArray("World " + 1 + " Levels Unlocked", tmp);
