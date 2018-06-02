@@ -158,6 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.AlexanderWarren.BlockJumper
     iOS: com.AlexanderWarren.BlockJumper
   buildNumber:
     iOS: 1
@@ -244,8 +245,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/alexanderwarren/Code/Unity/Block Jumper/Assets/Misc/user.keystore
+  AndroidKeyaliasName: key
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
