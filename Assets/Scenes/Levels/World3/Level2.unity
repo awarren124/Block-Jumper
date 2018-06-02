@@ -312,7 +312,7 @@ Prefab:
     - target: {fileID: 114700778638947704, guid: 569e245a39999fc428ac26557bbc5099,
         type: 2}
       propertyPath: computerControls
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4307381342937498, guid: 569e245a39999fc428ac26557bbc5099, type: 2}
       propertyPath: m_RootOrder

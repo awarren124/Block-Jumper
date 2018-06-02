@@ -30,6 +30,9 @@ public class Character : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.R)) {
             GameManager.instance.ResetSavedLevels();
         }
+        if(Input.GetKeyDown(KeyCode.S)){
+            ScreenCapture.CaptureScreenshot("/Users/alexanderwarren/Desktop/shot.png", 7);
+        }
     }
 
     void OnCollisionEnter(Collision col){
