@@ -31,6 +31,7 @@ public class Character : MonoBehaviour {
             GameManager.instance.ResetSavedLevels();
         }
         if(Input.GetKeyDown(KeyCode.S)){
+            print("shot");
             ScreenCapture.CaptureScreenshot("/Users/alexanderwarren/Desktop/shot.png", 7);
         }
     }
